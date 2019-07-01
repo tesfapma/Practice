@@ -20,13 +20,13 @@ numlabel, add
 *******************************************************************************
 
 * Set local macros for country and round
-global country 
+global country "ET"
 local country "$country"
 
-global round 
+global round "Round7"
 local round "$round"
 
-global CCRX "BFR5"
+global CCRX "ETR7"
 local CCRX "$CCRX"
 
 * Set directory forcountry and round 
@@ -35,7 +35,7 @@ global dofiledir
 global csvfilesdir 
 cd "$datadir"
 
-global csv1 
+global csv1 ETR7_SDP_questionnaire_v7
 local csv1  "$csv1"
 
 *Only need to update if there is more than one version of the form
@@ -49,7 +49,7 @@ global date=subinstr("`c_today'", " ", "",.)
 local todaystata=clock("`today'", "DMY")
 
 * Define the data cleaning do file name
-local cleaningdofile 
+local cleaningdofile SDP_DataCleaning
 
 *Zip all of the old versions of the datasets and the excel spreadsheets.  
 
