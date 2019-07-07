@@ -75,11 +75,11 @@ save `temp1', replace
 
 capture insheet using "$csvfilesdir/`csv2'.csv", names
 if _rc==0{
-tempfile temp2
-save `temp2', replace
-use `temp1'
-append using `temp2'
-}
+	tempfile temp2
+	save `temp2', replace
+	use `temp1'
+	append using `temp2'
+	}
 
 * Generate date variable
 gen date="$date"
@@ -283,8 +283,8 @@ foreach var of varlist _all{
 	if _rc==0 {
 		replace mistype=mistype+1 if (`var'==77 | `var'==88 | `var'==99) 
 		replace mistype_var=mistype_var+" "+"`var'" if `var'==77 | `var'==88 | `var'==99
+		}
 	}
-}
 
 *Exclude entries for facility number
 recode mistype 0=.
@@ -309,7 +309,7 @@ capture noisily export excel using `CCRX'_SDP_Checks_$date.xls, firstrow(variabl
 		gen x="NO NUMERIC VARIABLES WITH A VALUE OF 77, 88, OR 99"
 		export excel using `CCRX'_SDP_Checks_$date.xls, firstrow(variables) sh(Potential_Typos) sheetreplace
 		restore
-		}
+	}
 
 *******************************************************************************
 * SDP DATA CHECKS: EXPORT PUBLIC FACILITIES SUBMITTED BY COUNTY/RE/EA TO .XLS SHEET
