@@ -85,13 +85,13 @@ log using "`CCRX'_SDP_DataCleaning_$date.log", replace
 
 
 * Append .csv files if more than one version of the form was used in data collection
-	* Read in latest version of the .csv file (largest .csv file)
-	insheet using "$csvfilesdir/`csv1'.csv", names clear
-	save "`csv1'.dta", replace
+* Read in latest version of the .csv file (largest .csv file)
+insheet using "$csvfilesdir/`csv1'.csv", names clear
+save "`csv1'.dta", replace
 
-	* Read in earlier version of the .csv file (smaller .csv file)
-	capture insheet using "$csvfilesdir/`csv2'.csv", names clear
-	if _rc==0 {
+* Read in earlier version of the .csv file (smaller .csv file)
+capture insheet using "$csvfilesdir/`csv2'.csv", names clear
+if _rc==0 {
 
 	* Append and check if any information was lost in "forcing" the append
 	* If not information in some variables (i.e. all missing) data will be stored as byte; 
@@ -99,8 +99,8 @@ log using "`CCRX'_SDP_DataCleaning_$date.log", replace
 	append using "`csv1'.dta", force
 	}
 	
-	* Otherwise just use csv1
-	else {
+* Otherwise just use csv1
+else {
 	use "`csv1'.dta", clear
 	}
 
