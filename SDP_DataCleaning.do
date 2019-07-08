@@ -125,7 +125,7 @@ encode facility_type, gen(facility_typev2) lab(facility)
 
 * Survey language 
 * UPDATE BY COUNTRY
-label define language_list 1 english 2 french 3 moore 4 gourmantchema 5 fulfulde 6 dioula 96 other  
+label define language_list 1 "english" 2 "amharic" 3 "oromiffa" 4 "tigringna" 96 "other"  
 encode survey_language, gen(survey_languagev2) lab(language_list)
 
 
