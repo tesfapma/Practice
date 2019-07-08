@@ -54,14 +54,14 @@ local csv2 "$csv2"
 
 
 * Update list of all methods offered/counseled on ("methods"), all methods provided/prescribed ("methods_short") and all physical methods ("methods_stock")
-local methods "fster mster impl iud injdp injsp pill ec mc fc dia foam beads lam rhyth withd"
-local methods_short "fster mster impl injdp injsp iud pill ec mc fc dia foam beads"
+local methods "fster mster impl iud inj pill ec mc fc mod beads lam rhyth withd"
+local methods_short "fster mster impl iud inj pill ec mc fc beads"
 
 
 * Update list of all methods counseled on ("methods_full") and provided/referred ("methods_short_full")	
 * but use full method name, not abbreviation from ODK
-local methods_full "female_ster male_ster implants iud injectables_dp injectables_sp pills male_condoms female_condoms diaphragm foam ec beads lam rhythm withdrawal"
-local methods_short_full "female_ster male_ster implants iud injectables_sp injectables_dp pills male_condoms female_condoms diaphragm foam ec beads"
+local methods_full "female_ster male_ster implants iud injectables pills ec male_condoms female_condoms mod beads lam rhythm withdrawal"
+local methods_short_full "female_ster male_ster implants iud injectables pills ec male_condoms female_condoms beads"
 
 
 * Update list of physical methods, but use full method name, not abbreviation (cross-check with ODK stockout variable names [stock_* stockout_days_* and stockout_3mo_*])
