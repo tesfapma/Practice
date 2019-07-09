@@ -92,7 +92,7 @@ save "$datadir/`CCRX'_SDP_$date.dta", replace
 *******************************************************************************
 
 * Read in cleaning .do file here
-run "$dofiledir/`cleaningdofile'.do"
+run "$dofiledir/SDP_Datacleaning.do"
 
 * Rename ea variable
 capture rename ea EA
