@@ -23,6 +23,8 @@ numlabel, add
 global country “ET”
 local country "$country"
 
+* THIS IS A TEST FOR TESFA TAG CREATION 
+
 global round “2020”
 local round "$round"
 
